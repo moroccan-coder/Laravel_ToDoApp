@@ -19,14 +19,20 @@ class TodoController extends Controller
       ]);
     }
 
+    
 
-    public function show($id)
+    public function show(Todo $todo)
     {
-
+      return view('todos.todo')->withTodo($todo);
     }
+
+
 
     public function store(Request $request)
     {
 
     }
+
+
+  
 }
