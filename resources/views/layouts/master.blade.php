@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-</head>
-<body>
-    
-@yield('content')
 
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+<body class="p-2">
+
+
+    <div class="container">
+        @yield('content')
+    </div>
+
+
+
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

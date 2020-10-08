@@ -28,9 +28,20 @@ class TodoController extends Controller
 
 
 
+    public function edit()
+    {
+      return view('todos.edit-todo');
+    }
+
+
     public function store(Request $request)
     {
+        Todo::create([
+          'user_id'=>1,
+          'content'=> $request->todo
+        ]);
 
+        return redirect(route('todos'));
     }
 
 
